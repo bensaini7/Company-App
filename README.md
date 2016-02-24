@@ -1,6 +1,6 @@
 # Company-App
 
-This application provides APIs to access and modify a Company record and its related attributes. Besides Spring's MVC for managing API requests and Hibernate to manage data access functionalities. It uses AOP for logging which reduces the lines of code and delivers cleaner more readable code and logs. 
+This application provides APIs to access and modify a Company record and its related attributes. Besides Spring's MVC for managing API requests and Hibernate to manage data access functionalities, it uses AOP for logging which reduces the lines of code and delivers cleaner more readable code and logs. 
 
 It also has a HTML and AngularJS based front-end client which allows one to see a list of companies and edit and update any specific company. Application has been deployed on using Heroku's free account and the **front-end client can be accessed** via this **[link](https://sleepy-chamber-33264.herokuapp.com/companyapp/)**.
 
@@ -28,7 +28,7 @@ For security, one can consider Spring Security implementation in Java or OAuth-t
 > APIs in Postman and cURLs
 >-
 
-Test via postman by accessing saved test cases also shwn in the image below : [![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/09b718e8ef829d3c2d82)
+Test via postman by accessing saved test cases also shown in the image below : [![Run in Postman](https://run.pstmn.io/button.png)](https://www.getpostman.com/run-collection/09b718e8ef829d3c2d82)
 
 ![image of postman](https://github.com/bensaini7/Company-App/blob/master/postman_screenshot.png)
     
