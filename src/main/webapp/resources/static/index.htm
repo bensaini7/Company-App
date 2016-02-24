@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="companyApp">
+<head>
+<title>Company Info App</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/css/w3.css" />
+<link rel="stylesheet" href="resources/css/xeditable.css">
+<link rel="stylesheet" href="resources/css/core.css">
+<style>
+html, body, input, select, textarea {
+	font-size: 1.05em !important;
+}
+</style>
+
+<script src="resources/js/libs/angular.min.js"></script>
+<script src="resources/js/libs/angular-route.min.js"></script>
+<script src="resources/js/libs/angular-resource.min.js"></script>
+<script src="resources/js/libs/xeditable.min.js"></script>
+<script src="resources/js/angular/app.js"></script>
+<script src="resources/js/angular/routes.js"></script>
+<script src="resources/js/angular/services.js"></script>
+<script src="resources/js/angular/controllers.js"></script>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Company App</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+
+		<div ng-view></div>
+
+	</div>
+
+</body>
+</html>

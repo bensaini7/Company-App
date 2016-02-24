@@ -1,0 +1,111 @@
+ Page #:
+<a editable-text="page.num">{{page.num}}</a>
+Page Size
+<a editable-text="page.size">{{page.size}}</a>
+<h2 class="alert alert-danger" ng-if="errorMessage !== undefined">Error : {{errorMessage}}</h2>
+<div ng-repeat="company in getCompanyListResult" class="parentDiv">
+	<div class=" w3-card-4">
+		<div class="w3-row  w3-blue ">
+			<div class="w3-container w3-half">
+				<h2>
+					<b><a editable-text="company.name"
+						class="w3-text-shadow w3-text-white">{{company.name}}</a></b>
+				</h2>
+			</div>
+
+			<div class="w3-container w3-half" style="text-align: right">
+				<h3>
+					<a class="w3-btn" ng-click="updateCompanyInfo($index)"
+						ng-if="company.showMoreFlag === true">Update</a> <a class="w3-btn"
+						ng-click="showMoreInfo($index)"
+						ng-if="company.showMoreFlag === true">Less Info</a> <a
+						class="w3-btn" ng-click="showMoreInfo($index)"
+						ng-if="company.showMoreFlag !== true">More Info</a>
+				</h3>
+			</div>
+		</div>
+
+
+		<div class="w3-row">
+			<div class="w3-container w3-half">
+				<h3 class=" w3-text-black">
+					<b>Phone :</b> <a class="w3-text-black"
+						editable-text="company.phone"> {{ company.phone || 'No Phone' }} </a>
+				</h3>
+			</div>
+			<div class="w3-container w3-half" style="text-align: right">
+				<h3 class=" w3-text-black">
+					<b>Email :</b> <a class="w3-text-black"
+						editable-text="company.email"> {{ company.email || 'No Email'}} </a>
+				</h3>
+			</div>
+		</div>
+
+		<div class="w3-container " ng-if="company.showMoreFlag === true">
+			<hr class="w3-blue" style="height: 3px;" />
+			<h3 class=" w3-text-black">
+				<b>Address :</b> <a class="w3-text-black"
+					editable-text="company.address.address">{{company.address.address}}</a>
+			</h3>
+			<h3 class=" w3-text-black">
+				<b>City :</b> <a class="w3-text-black"
+					editable-text="company.address.city">{{company.address.city }}</a>
+			</h3>
+			<h3 class=" w3-text-black">
+				<b>Country :</b> <a class="w3-text-black"
+					editable-text="company.address.country">{{company.address.country}}</a>
+			</h3>
+		</div>
+
+		<div
+			ng-if="company.showMoreFlag === true">
+
+			<div class="w3-row w3-light-blue ">
+				<div class="w3-container w3-half">
+					<h2>
+						<b>Owners:</b>
+					</h2>
+				</div>
+				<div class="w3-container w3-half" style="text-align: right">
+					<h3>
+						<a class="w3-btn" ng-click="addOwner($index)">Add Owner</a>
+					</h3>
+				</div>
+			</div>
+
+			<div class="w3-container w3-half w3-grey w3-padding" ng-if="company.beneficialOwners.length > 0">First Name
+			</div>
+
+			<div class="w3-container w3-half w3-grey w3-padding" ng-if="company.beneficialOwners.length > 0">Last Name
+			</div>
+			<div class="w3-row" ng-repeat="owner in company.beneficialOwners" ng-if="company.beneficialOwners.length > 0">
+				<div class="w3-container w3-half">
+					<h3 class=" w3-text-black">
+						<a editable-text="owner.firstName">{{ owner.firstName
+							}}</a>
+					</h3>
+				</div>
+				<div class="w3-container w3-half">
+					<h3 class=" w3-text-black">
+						<a editable-text="owner.lastName">{{ owner.lastName
+							}}</a>
+					</h3>
+				</div>
+			</div>
+			<div class="w3-row" ng-if="company.beneficialOwners.length < 1">No owners Found</div>
+
+
+		</div>
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
